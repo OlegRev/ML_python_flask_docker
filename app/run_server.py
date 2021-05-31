@@ -27,7 +27,7 @@ def load_model(model_path):
     print(model)
 
 
-modelpath = "./models/pulsar_model.dill"
+modelpath = "app/app/models/pulsar_model.dill"
 load_model(modelpath)
 
 
