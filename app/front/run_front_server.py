@@ -31,7 +31,7 @@ def get_prediction(Excess_kurtosis_of_the_integrated_profile,
             'Skewness of the integrated profile': Skewness_of_the_integrated_profile,
             'Mean of the integrated profile': Mean_of_the_integrated_profile}
 
-    myurl = "http://127.0.0.1:8180/predict"
+    myurl = "http://0.0.0.0:8180/predict"
     req = urllib.request.Request(myurl)
     req.add_header('Content-Type', 'application/json; charset=utf-8')
     jsondata = json.dumps(body)
@@ -76,4 +76,4 @@ def predict_form():
 
 
 if __name__ == '__main__':
-    app.run(port=8181, debug=True)
+    app.run(host='0.0.0.0', port=8181, debug=True)
