@@ -52,14 +52,13 @@
 
 ### Клонируем репозиторий и создаем образ
 
-$ git clone git clone https://github.com/OlegRev/ML_python_flaks_docker.git
-$ cd ML_python_flaks_docker
-$ docker build -t <username>/gb_docker_flask_example .
+> $ git clone git clone https://github.com/OlegRev/ML_python_flaks_docker.git
+> $ cd ML_python_flaks_docker
+> $ docker build -t <username>/gb_docker_flask_example .
 
 ### Запускаем контейнер
 
 
-$ docker run -d -p 8180:8180 -p 8181:8181 -v 
-<username>/gb_docker_flask_example 
+> $ docker run -d -p 8180:8180 -p 8181:8181 -v <username>/gb_docker_flask_example 
 
 ### Переходим на localhost:8181
