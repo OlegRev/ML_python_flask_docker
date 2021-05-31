@@ -54,7 +54,7 @@
 
 >* $ git clone git clone https://github.com/OlegRev/ML_python_flaks_docker.git
 >* $ cd ML_python_flaks_docker
->* $ docker build -t <username>/gb_docker_flask_example .
+>* $ docker build -t <username> gb_docker_flask_example .
 
 ### Запускаем контейнер
 
