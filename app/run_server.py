@@ -1,19 +1,20 @@
+from time import strftime
+from logging.handlers import RotatingFileHandler
+import logging
+import flask
 import dill
 import pandas as pd
 import os
 
 dill._dill._reverse_typemap['ClassType'] = type
 # import cloudpickle
-import flask
-import logging
-from logging.handlers import RotatingFileHandler
-from time import strftime
 
 # initialize our Flask application and the model
 app = flask.Flask(__name__)
 model = None
 
-handler = RotatingFileHandler(filename='../app.log', maxBytes=100000, backupCount=10)
+handler = RotatingFileHandler(
+    filename='../app.log', maxBytes=100000, backupCount=10)
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
 logger.addHandler(handler)
@@ -27,7 +28,7 @@ def load_model(model_path):
     print(model)
 
 
-modelpath = "app/app/models/pulsar_model.dill"
+modelpath = "/app/app/models/pulsar_model.dill"
 load_model(modelpath)
 
 
@@ -50,7 +51,8 @@ def predict():
         request_json = flask.request.get_json()
 
         if request_json["Excess kurtosis of the integrated profile"]:
-            Excess_kurtosis_of_the_integrated_profile = request_json['Excess kurtosis of the integrated profile']
+            Excess_kurtosis_of_the_integrated_profile = request_json[
+                'Excess kurtosis of the integrated profile']
 
         if request_json["Skewness of the integrated profile"]:
             Skewness_of_the_integrated_profile = request_json['Skewness of the integrated profile']
