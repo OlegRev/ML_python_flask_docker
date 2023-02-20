@@ -52,8 +52,8 @@
 
 ### Клонируем репозиторий и создаем образ
 
->* git clone git clone https://github.com/OlegRev/ML_python_flaks_docker.git
->* cd ML_python_flaks_docker
+>* git clone git@github.com:OlegRev/ML_python_flask_docker.git
+>* cd ML_python_flask_docker
 >* docker build -t oleg/gb_docker_flask_example .
 
 ### Запускаем контейнер
